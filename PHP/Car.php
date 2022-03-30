@@ -4,4 +4,13 @@ class Car {
     public $license = string;
     public $driver = string;
     public $passenger = string;
+
+    public function __construct($license, $driver) {
+        $this->license = $license;
+        $this->driver = $driver;
+    }
+
+    public function printDataCar() {
+        echo "License: {$this->license} - Driver {$this->driver->name}"
+    }
 }
