@@ -1,14 +1,14 @@
 from car import Car
-from account import Account
+from driver import Driver
 from uber_x import UberX
 
 
 def main() -> None:
-    car = Car("AMS234", Account("Andrés Herrera", "ANDA876"))
+    car = Car("AMS234", Driver("Andrés Herrera", "ANDA876"))
     print(vars(car))
     print(vars(car.driver))
 
-    uberX = UberX("AMS2340", Account("Andrea Ferran", "ANDA765"), "Chevrolet", "Spark")
+    uberX = UberX("AMS2340", Driver("Andrea Ferran", "ANDA765"), "Chevrolet", "Spark")
     print(vars(uberX))
     print(vars(uberX.driver))
 
