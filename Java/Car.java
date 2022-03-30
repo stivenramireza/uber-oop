@@ -1,20 +1,38 @@
 package Java;
 
 class Car {
-    Integer id;
-    String license;
-    Account driver;
-    private Integer passengers;
+    private Integer id;
+    private String license;
+    private Account driver;
+    protected Integer passengers;
 
     public Car(String license, Account driver) {
         this.license = license;
         this.driver = driver;
     }
 
-    void printDataCar() {
-        if (passengers != null) {
-            System.out.println("License: " + license + " - " + "Driver: " + driver.name  + " - " + "Passengers: " + passengers);
-        }   
+    public Integer getId() {
+        return this.id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getLicense() {
+        return this.license;
+    }
+
+    public void setLicense(String license) {
+        this.license = license;
+    }
+
+    public Account getDriver() {
+        return this.driver;
+    }
+
+    public void setDriver(Account driver) {
+        this.driver = driver;
     }
 
     public Integer getPassengers() {
@@ -27,6 +45,12 @@ class Car {
         } else {
             System.out.println("You need assign 4 passengers");
         }
+    }
+
+    void printDataCar() {
+        if (passengers != null) {
+            System.out.println("License: " + license + " - " + "Driver: " + driver.name  + " - " + "Passengers: " + passengers);
+        }   
     }
     
 }
