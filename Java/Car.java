@@ -4,7 +4,7 @@ class Car {
     Integer id;
     String license;
     Account driver;
-    Integer passengers;
+    private Integer passengers;
 
     public Car(String license, Account driver) {
         this.license = license;
@@ -12,7 +12,21 @@ class Car {
     }
 
     void printDataCar() {
-        System.out.println("License: " + license + " - " + "Driver: " + driver.name);
+        if (passengers != null) {
+            System.out.println("License: " + license + " - " + "Driver: " + driver.name  + " - " + "Passengers: " + passengers);
+        }   
+    }
+
+    public Integer getPassengers() {
+        return this.passengers;
+    }
+
+    public void setPassengers(Integer passengers) {
+        if (passengers == 4) {
+            this.passengers = passengers;
+        } else {
+            System.out.println("You need assign 4 passengers");
+        }
     }
     
 }
