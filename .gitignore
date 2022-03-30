@@ -6,3 +6,6 @@ Python/venv
 
 # Java compilation
 Java/*.class
+
+# Python cache
+Python/__pycache__

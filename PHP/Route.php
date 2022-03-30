@@ -1,7 +1,7 @@
 <?php
 class Route {
-    public $id = integer;
-    public $start = [];
-    public $end = [];
+    public $id;
+    public $start;
+    public $end;
 }
 ?>
